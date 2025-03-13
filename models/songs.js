@@ -1,6 +1,4 @@
-
 const db = require("../util/database");
-
 
 module.exports = class Song {
   constructor(song, artist, genre, id) {
@@ -10,8 +8,11 @@ module.exports = class Song {
     this.id = id;
   }
 
-  save() {
-   return  db.query("INSERT INTO song_table (song, artist, genre) VALUES ($1, $2, $3)", [this.song, this.artist, this.genre]);
+  async save() {
+    return db.query(
+      "INSERT INTO song_table (song, artist, genre) VALUES ($1, $2, $3)",
+      [this.song, this.artist, this.genre]
+    );
   }
 
   static fetchAll() {

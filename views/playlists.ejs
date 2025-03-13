@@ -20,7 +20,7 @@
       <ul>
         <% for (let playlists of ply) { %>
         <li style="display:flex; justify-content: space-between; align-items: center;" >
-          <span><%= playlists.song + " by " + playlists.artist %></span>
+          <span><%= playlists.song + " by " + playlists.artist + "  " %></span>
           <form action="/playlists/delete/<%= playlists.id %>" method="GET">
             <button type="submit" style="padding: 10px 20px;
             background-color: #ff0000;
