@@ -6,9 +6,8 @@ const Song = require("../models/songs");
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 
-const BASE_URL = 'https://fav-songs.onrender.com';
 
-router.get(`${BASE_URL}/`, (req, res) => {
+router.get("/", (req, res) => {
   res.render("index");
 });
 
