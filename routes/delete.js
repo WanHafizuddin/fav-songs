@@ -8,7 +8,7 @@ router.get("/playlists/delete/:id", (req, res) => {
   Song.deleteById(id)
     .then(() => {
       console.log("Deleted successfully!");
-      res.redirect('${BASE_URL}/playlists"');
+      res.redirect("/playlists");
     })
     .catch((err) => {
       console.log("Error deleting:", err);
