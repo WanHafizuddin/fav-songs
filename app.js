@@ -8,6 +8,8 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
 
+
+
 const songRoutes = require("./routes/song");
 const playlistRoutes = require("./routes/playlists");
 const deleteRoutes = require ("./routes/delete")

@@ -2,7 +2,9 @@ const express = require ("express");
 const router = express.Router();
 const Song = require("../models/songs");
 
-router.get("/playlists", (req, res) => {
+const BASE_URL = 'https://fav-songs.onrender.com';
+
+router.get('${BASE_URL}/playlists', (req, res) => {
   Song.fetchAll()
     .then((result) => {
       res.render("playlists", { ply: result.rows, path: "/playlists" });
