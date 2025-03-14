@@ -8,7 +8,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 const BASE_URL = 'https://fav-songs.onrender.com';
 
-router.get("${BASE_URL}/", (req, res) => {
+router.get(`${BASE_URL}/`, (req, res) => {
   res.render("index");
 });
 

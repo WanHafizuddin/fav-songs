@@ -4,7 +4,7 @@ const Song = require("../models/songs");
 
 const BASE_URL = 'https://fav-songs.onrender.com';
 
-router.get('${BASE_URL}/playlists/delete/:id', (req, res) => {
+router.get(`${BASE_URL}/playlists/delete/:id`, (req, res) => {
   const { id } = req.params; // Extract id from request parameters
   
   Song.deleteById(id)
